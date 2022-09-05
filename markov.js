@@ -1,4 +1,4 @@
-/** Textual markov chain generator */
+v/** Textual markov chain generator */
 
 
 class MarkovMachine {
@@ -18,10 +18,25 @@ class MarkovMachine {
 
   makeChains() {
     // TODO
+    let newChain = new Map();
+
+    this.words.forEach(++[i]);{
+      let word = this.words;
+      console.log(word)
+      let nextWord = this.words[i + 1] || null;
+
+      if (newChain.includes(word)) newChain.get(word).push(nextWord);
+      else newChain.set(word, [nextWord]);
+    }
+    this.newChain = newChain;
   }
 
 
   /** return random text from chains */
+
+  choice(array) {
+    return array[Math.random() * array.length];
+  }
 
   makeText(numWords = 100) {
     // TODO
